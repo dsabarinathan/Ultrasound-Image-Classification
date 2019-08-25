@@ -52,4 +52,12 @@ Z = (n+1)*Z/cnt;            % normalize the amplitude of moments
 A = abs(Z);                 % calculate the amplitude of the moment
 Phi = angle(Z)*180/pi;      % calculate the phase of the mement (in degrees)
 
+%n = 4; m = 2;           % Define the order and the repetition of the moment
+
+%[~, AOH, PhiOH] = Zernikmoment(BW,n,m);      % Call Zernikemoment fuction
+
+%features{count,22}=AOH;
+
+%features{count,23}=PhiOH;
+
 
