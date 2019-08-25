@@ -1,18 +1,14 @@
-function value = AP(BW)
+function value = MinorAxisLength (BW)
 
 %%%  paper  refernce %%%
 %%% A Segmentation Method and Comparison of Classification Methods for Thyroid Ultrasound Images
  %%%
 
 
-properties = regionprops(BW,{'Perimeter','Area'});
-value= properties.Area/ properties.Perimeter;
+properties = regionprops(BW,{'MinorAxisLength'});
+value= properties.MinorAxisLength;
 
 end
-
-
-
-
 
 
 
