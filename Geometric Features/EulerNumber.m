@@ -1,8 +1,9 @@
 function value =EulerNumber(BW)
 
 %%%  paper  refernce %%%
-%%% A Segmentation Method and Comparison of Classification Methods for Thyroid Ultrasound Images
- %%%
+%%% ShapeDescriptor/Feature Extraction Techniques
+Fred Park
+UCI iCAMP2011
 
 
 properties = regionprops(BW,{'EulerNumber'});
