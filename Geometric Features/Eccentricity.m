@@ -5,7 +5,7 @@ function value = Eccentricity(BW)
 
 
 properties = regionprops(BW,{'MajorAxisLength','Minor Axis Length'});
-value= properties.Minor Axis Length / properties.Major Axis Length ;
+value= properties.MinorAxisLength / properties.MajorAxisLength ;
 
 end
 
