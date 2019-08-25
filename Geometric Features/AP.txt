@@ -1,0 +1,22 @@
+function value = Centroid(BW)
+
+%%%  paper  refernce %%%
+%%% A Segmentation Method and Comparison of Classification Methods for Thyroid Ultrasound Images
+ %%%
+
+
+properties = regionprops(BW,{'Area','Perimeter',''Centroid''});
+value1= properties.Centroid(1);
+value2= properties.Centroid(2);
+
+end
+
+
+
+
+
+
+
+
+
+
