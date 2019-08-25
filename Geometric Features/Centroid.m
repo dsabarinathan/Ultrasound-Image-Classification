@@ -5,7 +5,7 @@ function value = Centroid(BW)
  %%%
 
 
-properties = regionprops(BW,{'Area','Perimeter',''Centroid''});
+properties = regionprops(BW,{'Area','Perimeter','Centroid'});
 value1= properties.Centroid(1);
 value2= properties.Centroid(2);
 
