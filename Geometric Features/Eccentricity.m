@@ -5,7 +5,7 @@ function value = Eccentricity(BW)
 %%% and external characteristics %%%
 
 
-properties = regionprops(BW,{'MajorAxisLength','Area'});
+properties = regionprops(BW,{'MajorAxisLength','Minor Axis Length'});
 value= properties.Minor Axis Length / properties.Major Axis Length ;
 
 end
