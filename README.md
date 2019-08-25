@@ -1,2 +1,2 @@
 # Ultrasound-Image-Classification
-Breast Cancer Classification based on Geometric Features
+Thyroid Nodule image Classification based on Geometric  and Morphological Features
