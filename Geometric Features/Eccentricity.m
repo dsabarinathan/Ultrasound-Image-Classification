@@ -1,8 +1,7 @@
 function value = Eccentricity(BW)
 
 %%%  paper  refernce %%%
-%%% Computer aided diagnosis for thyroid cancer system based on internal
-%%% and external characteristics %%%
+%%% A Segmentation Method and Comparison of Classification Methods for Thyroid Ultrasound Images %%%
 
 
 properties = regionprops(BW,{'MajorAxisLength','Minor Axis Length'});
