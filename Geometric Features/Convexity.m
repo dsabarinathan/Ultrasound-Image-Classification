@@ -1,5 +1,9 @@
 function value = Convexity(BW)
 
+%%%  paper  refernce %%%
+%%% Computer aided diagnosis for thyroid cancer system based on internal
+%%% and external characteristics %%%
+
 
 properties = regionprops(BW,'Perimeter');
 convexHull = bwconvhull(BW);
