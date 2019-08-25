@@ -1,4 +1,4 @@
-function value = BoundingBoxCords(BW)
+function [value1,value2,value3,value4] = BoundingBoxCords(BW)
 
 %%%  paper  refernce %%%
 %%% A Segmentation Method and Comparison of Classification Methods for Thyroid Ultrasound Images
