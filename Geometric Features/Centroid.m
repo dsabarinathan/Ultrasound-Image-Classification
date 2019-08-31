@@ -1,4 +1,4 @@
-function value = Centroid(BW)
+function [value1,value2] = Centroid(BW)
 
 %%%  paper  refernce %%%
 %%% ShapeDescriptor/Feature Extraction Techniques
