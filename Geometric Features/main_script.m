@@ -7,14 +7,14 @@ clear all;
 % 
 
 
-TrainImage= dir('E:\Data_Science\ultrasound\codeandimages\trainImages\malig_mask\');
+TrainImage= dir('E:\Data_Science\ultrasound\new_dataset\val_aug\Benign\Mask\');
 
 
 count=1;
 % trainpath='E:\Data_Science\ultrasound\codeandimages\malig\';
-maskpath='E:\Data_Science\ultrasound\codeandimages\trainImages\malig_mask\';
+maskpath='E:\Data_Science\ultrasound\new_dataset\val_aug\Benign\Mask\';
 
-features = zeros(size(TrainImage,1)-3,16776);
+features = zeros(size(TrainImage,1)-3,16775);
 % label =ones(size(TrainImage,1)-3);
 for row=3:size(TrainImage,1)
 
@@ -23,7 +23,8 @@ for row=3:size(TrainImage,1)
     
     BW=imread([maskpath,TrainImage(row).name]);
     BW=im2bw(BW); %#ok<IM2BW>
-    
+%     BW = BW(20:end,:);
+    BW = bwareaopen(BW,2500);
     features(count,1)=AP(BW);
     features(count,2)=Area(BW);
     features(count,3)= Aspectratio(BW);
@@ -50,33 +51,33 @@ for row=3:size(TrainImage,1)
     features(count,20) = FilledArea(BW);
     features(count,21) = FindingEdgeAspect(BW);
     features(count,22) = FormFactor(BW);
-    features(count,23:23+16740) =HOGFeatureExtraction(BW); 
+    features(count,23:23+16739) =HOGFeatureExtraction(BW); 
     
-    features(count,16764) =MajorAxislength(BW); 
+    features(count,16763) =MajorAxislength(BW); 
 
-    features(count,16765) =MinorAxisLength(BW); 
+    features(count,16764) =MinorAxisLength(BW); 
     [AOH,PhiOH ] =MomemtFeature(BW);
     
-    features(count,16766) = AOH;
-    features(count,16767) = PhiOH;
-    features(count,16768) = Orientation(BW);
-    features(count,16769) = Perimeter(BW);
-    features(count,16770) = RatioAspect(BW);
-    features(count,16771) = RatioHeightWidth(BW);
-    features(count,16772) = Rectangularity(BW);
-    features(count,16773) = RoundNess(BW);
-    features(count,16774) = Solidity(BW);
-    features(count,16775) = TCARatio(BW);
+    features(count,16765) = AOH;
+    features(count,16766) = PhiOH;
+    features(count,16767) = Orientation(BW);
+    features(count,16768) = Perimeter(BW);
+    features(count,16769) = RatioAspect(BW);
+    features(count,16770) = RatioHeightWidth(BW);
+    features(count,16771) = Rectangularity(BW);
+    features(count,16772) = RoundNess(BW);
+    features(count,16773) = Solidity(BW);
+    features(count,16774) = TCARatio(BW);
 
-    features(count,16776) = Tortuosity(BW);
+    features(count,16775) = Tortuosity(BW);
     
   
-    
-    
+    display(count)
+    count=count+1;
 
     
 
     
 end
 
-save('feature_vector.mat','features')
+save('feature_vector_validation_Benign.mat','features')
