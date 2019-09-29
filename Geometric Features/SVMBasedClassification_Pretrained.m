@@ -37,7 +37,7 @@ Y_test=[ones(size(benignTest,1),1)*-1;ones(size(MalginantTest,1),1)];
 % % X_test = [X_test,rand(30,4)];
 % % number of features
 
-%ranking=[ 6, 12,20,2,7,16768,16763,14,7];
+%rankingLaplacian=[ 6, 12,20,2,7,16768,16763,14,7];
 
 rankinginfs= [6,12,20,2,7,16768];
 
