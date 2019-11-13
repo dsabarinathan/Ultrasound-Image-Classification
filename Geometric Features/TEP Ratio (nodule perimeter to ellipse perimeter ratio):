@@ -1,1 +1,8 @@
-TEP Ratio (nodule perimeter to ellipse perimeter ratio):
+function value = TEPRatio(BW)
+
+
+properties = regionprops(BW,{'Perimeter','ConvexArea'});
+
+value= [properties.Perimeter]/[Ellipse perimeter];
+
+end
